@@ -1,5 +1,12 @@
 #include "minitalk.h"
 
+char bits_to_char(const char *bits) {
+    char result = 0;
+    for (int i = 0; i < 8; i++)
+        result = (result << 1) | (bits[i] - '0');
+    return result;
+}
+
 void alm_bin(int sig, siginfo_t *info, void *context)
 {
     if (state.current_client_pid == 0) {
@@ -9,7 +16,7 @@ void alm_bin(int sig, siginfo_t *info, void *context)
         // Si el PID no coincide, ignorar la señal
         return;
     }
-
+    printf("Bit recibido: %d\n", info->si_pid);
     if (sig == SIGUSR1)
         state.bits[state.bit_index] = '1';
     else if (sig == SIGUSR2)
@@ -29,7 +36,8 @@ void alm_bin(int sig, siginfo_t *info, void *context)
                 result |= 1;
         }
 
-        if (result == '\0') { // Si se recibe un byte nulo, significa fin de mensaje
+        if (result == '\0') {
+            printf("Carácter recibido: %c : %d\n", result, info->si_pid); // Si se recibe un byte nulo, significa fin de mensaje
             conv_txt(); // Imprimir la cadena completa
             free(state.message); // Liberar la memoria
             init_server_state(); // Reiniciar el estado

@@ -3,23 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yurolive <yurolive@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:38:41 by yurolive          #+#    #+#             */
-/*   Updated: 2024/10/24 18:18:36 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/10/25 16:33:37 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINITALK_H
-#define MINITALK_H
+# define MINITALK_H
 
-#include <signal.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <sys/types.h>
-#include <stdlib.h>
-#include <limits.h>
-#include <asm-generic/siginfo.h>
+# define _XOPEN_SOURCE 500
+# include <signal.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <sys/types.h>
+# include <stdlib.h>
+# include <limits.h>
+# include <string.h>
 
 // Estructura para el estado del servidor
 typedef struct {

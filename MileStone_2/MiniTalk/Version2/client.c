@@ -25,14 +25,16 @@ void conv_bin(char *s, int pidserv)
         }
         i++;
     }
-    // Enviar byte nulo al final para indicar el fin del mensaje
-    kill(pidserv, SIGUSR1); // Enviar un SIGUSR1 para el byte nulo
+    for (int j = 0; j < 8; j++) {
+        kill(pidserv, SIGUSR2); // Enviar 8 SIGUSR2 para representar el byte nulo
+        usleep(400);
+    }
 }
 
 int main(int argc, char **argv)
 {
     int pidserv;
-
+    ft_putnbr(getpid());
     if (argc != 3)
         return (-1);
     pidserv = ft_atoi(argv[1]);
