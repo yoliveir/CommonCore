@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:29:12 by yurolive          #+#    #+#             */
-/*   Updated: 2024/10/28 16:55:49 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/10/29 15:15:43 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ping_handler(int signum, siginfo_t *info, void *context)
 		g_server.is_ready = 0;
 }
 
-int	ckeck_server_and_sleep(void)
+int	check_server_and_sleep(void)
 {
 	const int	total_sleep = RETRY_TIME * 1000 * 1000;
 	const int	sleep_time = total_sleep / RETRY_INTERVALS;
@@ -55,8 +55,6 @@ int	ckeck_server_and_sleep(void)
 	return (0);
 }
 
-
-
 int	handle_timeouts(int pid)
 {
 	int	i;
@@ -66,7 +64,7 @@ int	handle_timeouts(int pid)
 	{
 		kill(pid, SIGUSR1);
 		write(1, "Waiting response from server\n", 30);
-		if (ckeck_server_and_sleep())
+		if (check_server_and_sleep())
 			return (0);
 	}
 	return (1);

@@ -6,13 +6,30 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:29:44 by yurolive          #+#    #+#             */
-/*   Updated: 2024/10/28 16:50:09 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/10/29 15:10:47 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "client.h"
 
 t_global	g_server;
+
+void	parser(int argc, char **argv)
+{
+	char	*str;
+	int		i;
+
+	str = argv[1];
+	i = 0;
+	if (argc != 3)
+		ft_print_error(USAGE);
+	while (str[i])
+	{
+		if (!ft_isdigit(str[i]))
+			ft_print_error((char *)str);
+		i++;
+	}
+}
 
 void	signal_handler(int signum, siginfo_t *info, void *context)
 {

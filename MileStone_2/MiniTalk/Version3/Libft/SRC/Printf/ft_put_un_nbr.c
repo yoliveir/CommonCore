@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 10:09:59 by yurolive          #+#    #+#             */
-/*   Updated: 2024/10/21 13:58:34 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/10/29 19:07:57 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int	ft_put_un_nbr(unsigned int nb)
 	ft_print_nb(nb);
 	return (ft_len_nbr(nb));
 }
-
 
 int	ft_putnbr_printf(int nb)
 {

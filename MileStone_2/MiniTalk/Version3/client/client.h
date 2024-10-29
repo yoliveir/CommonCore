@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:15:42 by yurolive          #+#    #+#             */
-/*   Updated: 2024/10/28 17:01:22 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/10/29 19:08:14 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@
 
 # define USAGE "\rUsage:\n\t./client [pid_server] [message]"
 # define BAD_SIGNAL "Signal sending failed: Operation not permitted."
-
-# define CHAR_0 SIGUSR1
-# define CHAR_1 SIGUSR2
 
 typedef struct s_client
 {

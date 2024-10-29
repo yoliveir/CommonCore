@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:29:24 by yurolive          #+#    #+#             */
-/*   Updated: 2024/10/28 16:47:28 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:59:55 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ void	send_signals(void *data, size_t bit_length, t_client *info)
 	while (i >= 0)
 	{
 		if (value & (1ULL << i))
-			send_signal(info->server_pid, CHAR_1);
+			send_signal(info->server_pid, SIGUSR2);
 		else
-			send_signal(info->server_pid, CHAR_0);
+			send_signal(info->server_pid, SIGUSR1);
 		i--;
 		while (!g_server.ready_to_proceed)
 			usleep(100);
