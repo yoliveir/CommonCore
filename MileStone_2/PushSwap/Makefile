@@ -6,7 +6,7 @@
 #    By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/11 16:15:27 by yurolive          #+#    #+#              #
-#    Updated: 2024/11/11 16:15:28 by yurolive         ###   ########.fr        #
+#    Updated: 2024/11/11 17:37:05 by yurolive         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ SRCS = ./src/pushswap.c ./src/ft_strlen.c ./src/ft_atoi.c ./src/swap.c ./src/sor
 			./src/rb.c ./src/rr.c ./src/sb.c ./src/rrr.c ./src/check_order.c \
 			./src/check_same_nums.c ./src/ft_free.c ./src/ordernums_peq.c ./src/ordernums.c \
 			./src/pa.c ./src/pb.c ./src/check_num.c ./src/ft_isdigit.c \
-			./src/ft_substr.c ./src/ft_free2.c ./src/check_args.c
+			./src/ft_substr.c ./src/ft_free2.c ./src/check_args.c ./src/ft_split.c ./src/ft_calloc.c
 
 BONUS_SRC = ./bns/checker_bonus.c ./bns/ss_bonus.c ./bns/sa_bonus.c ./bns/sb_bonus.c ./bns/pa_bonus.c \
 				./bns/rb_bonus.c ./bns/rr_bonus.c ./bns/rra_bonus.c ./bns/rrb_bonus.c ./bns/rrr_bonus.c ./bns/swap_bonus.c \

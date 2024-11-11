@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:13:20 by yurolive          #+#    #+#             */
-/*   Updated: 2024/11/11 16:13:21 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:20:14 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int arc, char **args)
 	d = malloc(sizeof(t_list));
 	if (!d)
 		return (0);
-	if (check_args(args, arc - 1) == -1)
+	if (check_args(&args, &arc) == -1)
 		ft_free(d);
 	d->argc = arc - 1;
 	d->error = 0;

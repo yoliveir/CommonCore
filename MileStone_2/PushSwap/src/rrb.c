@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:13:57 by yurolive          #+#    #+#             */
-/*   Updated: 2024/11/11 16:13:57 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:20:43 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 void	rrb(t_list *d)
 {
 	int	i;
-	int	j;
 
 	i = d->sib - 1;
-	j = 0;
 	while (i - 1 >= 0)
 	{
 		swap(&d->sb[i], &d->sb[i - 1]);

@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:12:36 by yurolive          #+#    #+#             */
-/*   Updated: 2024/11/11 16:12:37 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:21:28 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,7 @@ void	ordernums_peq3(t_list *d, int i)
 void	ordernums_peq2(t_list *d)
 {
 	int	i;
-	int	j;
 
-	j = 0;
 	i = d->lsp;
 	while (d->sib < 1)
 	{
@@ -71,9 +69,7 @@ void	ordernums_peq2(t_list *d)
 void	ordernums_peq(t_list *d)
 {
 	int	i;
-	int	j;
 
-	j = 0;
 	i = d->lsp;
 	while (d->sib <= (d->argc / 2))
 	{

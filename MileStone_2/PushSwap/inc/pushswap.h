@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:07:09 by yurolive          #+#    #+#             */
-/*   Updated: 2024/11/11 16:07:11 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/11/11 18:48:53 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
+# include <stddef.h>
 
 typedef struct s_list
 {
@@ -46,7 +47,7 @@ int		check_same_nums(t_list *d);
 int		check_order(t_list *d);
 int		ft_isdigit(int i);
 int		check_num(char *s);
-int		check_args(char **args, int argc);
+int		check_args(char ***args, int *argc);
 void	swap(int *argv1, int *argv2);
 void	sortnum(t_list *d);
 void	changenum(t_list *d);
@@ -67,5 +68,8 @@ void	rr(t_list *d);
 void	rrr(t_list *d);
 void	ft_free(t_list *d);
 void	ft_free2(t_list *d);
+void	*ft_calloc(size_t count, size_t size);
+char	**ft_split(char *s, char c);
+char	*ft_strdup(char *s1);
 
 #endif
