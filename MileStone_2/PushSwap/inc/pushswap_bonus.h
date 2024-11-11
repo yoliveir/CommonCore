@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   pushswap_bonus.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gemartin <gemartin@student.42barc...>      +#+  +:+       +#+        */
+/*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 01:26:42 by gemartin          #+#    #+#             */
-/*   Updated: 2022/08/09 11:26:07 by gemartin         ###   ########.fr       */
+/*   Created: 2024/11/11 16:09:55 by yurolive          #+#    #+#             */
+/*   Updated: 2024/11/11 16:10:08 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef PUSHSWAP_BONUS_H
 # define PUSHSWAP_BONUS_H
 
-# include<unistd.h>
-# include<stdlib.h>
-# include<limits.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -30,7 +31,6 @@ typedef struct s_list
 
 char	*ft_substr(char *s, int start, int len);
 char	*get_next_line(int fd);
-int		checker_bonus(int argc, char **argv);
 int		ft_strlen(char *s);
 int		ft_atoi(const char *str, t_list *d);
 int		check_same_nums(t_list *d);

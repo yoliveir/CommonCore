@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   pushswap.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gemartin <gemartin@student.42barc...>      +#+  +:+       +#+        */
+/*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 01:26:42 by gemartin          #+#    #+#             */
-/*   Updated: 2022/04/13 18:19:44 by marvin           ###   ########.fr       */
+/*   Created: 2024/11/11 16:07:09 by yurolive          #+#    #+#             */
+/*   Updated: 2024/11/11 16:07:11 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef PUSHSWAP_H
 # define PUSHSWAP_H
 
-# include<unistd.h>
-# include<stdlib.h>
-# include<limits.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -44,9 +45,7 @@ int		ft_atoi(const char *str, t_list *d);
 int		check_same_nums(t_list *d);
 int		check_order(t_list *d);
 int		ft_isdigit(int i);
-int		ft_space(char *s);
 int		check_num(char *s);
-int		ft_arg2_to_int(char *s, t_list *d);
 int		check_args(char **args, int argc);
 void	swap(int *argv1, int *argv2);
 void	sortnum(t_list *d);

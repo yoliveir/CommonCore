@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gemartin <gemartin@student.42barc...>      +#+  +:+       +#+        */
+/*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 12:25:41 by gemartin          #+#    #+#             */
-/*   Updated: 2022/04/13 18:35:36 by marvin           ###   ########.fr       */
+/*   Created: 2024/11/11 16:16:45 by yurolive          #+#    #+#             */
+/*   Updated: 2024/11/11 16:16:46 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	check_num(char *s)
 		|| (s[j] >= '0' && s[j] <= '9'))
 	{
 		i++;
-	j++;
+		j++;
 		while (s[j])
 		{
 			if (s[j] >= '0' && s[j] <= '9')

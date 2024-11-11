@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gemartin <gemartin@student.42barc...>      +#+  +:+       +#+        */
+/*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 13:52:44 by gemartin          #+#    #+#             */
-/*   Updated: 2022/04/07 23:10:05 by marvin           ###   ########.fr       */
+/*   Created: 2024/11/11 16:17:00 by yurolive          #+#    #+#             */
+/*   Updated: 2024/11/11 16:17:01 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
