@@ -6,11 +6,24 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 17:10:13 by yurolive          #+#    #+#             */
-/*   Updated: 2024/11/11 18:48:47 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/11/12 18:53:55 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/pushswap.h"
+
+void	ft_free_split(char **split)
+{
+	int	i;
+
+	i = 0;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
+}
 
 static void	*ft_memset(void *b, int c, size_t len)
 {

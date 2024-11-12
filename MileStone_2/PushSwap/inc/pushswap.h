@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:07:09 by yurolive          #+#    #+#             */
-/*   Updated: 2024/11/11 18:48:53 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/11/12 17:33:17 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,6 @@ void	ft_free2(t_list *d);
 void	*ft_calloc(size_t count, size_t size);
 char	**ft_split(char *s, char c);
 char	*ft_strdup(char *s1);
+void	ft_free_split(char **split);
 
 #endif

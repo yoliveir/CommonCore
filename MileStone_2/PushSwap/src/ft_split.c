@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 17:07:33 by yurolive          #+#    #+#             */
-/*   Updated: 2024/11/11 17:45:19 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/11/12 17:54:49 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,8 @@ static char	*ft_split_char(const char *str, int start, int finish, char **split)
 	word = malloc((finish - start + 1) * sizeof(char));
 	if (!word)
 	{
-		while (split[i])
-			free(split[i++]);
-		free(split);
-		return (0);
+		ft_free_split(split);
+		return (NULL);
 	}
 	while (start < finish)
 		word[i++] = str[start++];
@@ -78,7 +76,7 @@ char	**ft_split(char *s, char c)
 		{
 			new_word = ft_split_char(s, index, i, split);
 			if (!new_word)
-				return (0);
+				return (ft_free_split(split), NULL);
 			split[j++] = aux_split(new_word, &index);
 		}
 	}

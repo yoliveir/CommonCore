@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:10:37 by yurolive          #+#    #+#             */
-/*   Updated: 2024/11/11 18:57:21 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:58:06 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	add_name(char ***args, int *argc)
 		i++;
 	}
 	new_args[*argc + 1] = NULL;
+	free(*args);
 	return (*args = new_args, *argc += 1, 0);
 }
 
@@ -54,11 +55,11 @@ int	check_args(char ***args, int *argc)
 		while (split_args[*argc])
 			(*argc)++;
 		if (add_name(args, argc) == -1)
-			return (-1);
+			return (ft_free_split(split_args), -1);
 		return (0);
 	}
 	i = 0;
-	while (i++ < *argc)
+	while (++i < *argc)
 	{
 		if (check_num((*args)[i]) == -1 || (*args)[i][0] == '\0')
 			return (-1);

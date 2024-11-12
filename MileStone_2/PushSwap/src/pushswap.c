@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:13:20 by yurolive          #+#    #+#             */
-/*   Updated: 2024/11/11 17:20:14 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:38:12 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		arg_to_int(t_list *d, int arc, char **args);
 int		ft_choose_size(int arc, t_list *d);
-int		init_data(t_list *d);
+int		init_data(t_list *d, int argc);
 
 int	main(int arc, char **args)
 {
@@ -27,9 +27,7 @@ int	main(int arc, char **args)
 		return (0);
 	if (check_args(&args, &arc) == -1)
 		ft_free(d);
-	d->argc = arc - 1;
-	d->error = 0;
-	if (init_data(d) == -1)
+	if (init_data(d, arc) == -1)
 		ft_free(d);
 	if (arg_to_int(d, arc, args) == -1)
 	{
@@ -80,20 +78,16 @@ int	arg_to_int(t_list *d, int arc, char **args)
 	return (0);
 }
 
-int	init_data(t_list *d)
+int	init_data(t_list *d, int argc)
 {
 	d->sa = malloc(sizeof(int) * d->argc);
 	if (!d->sa)
-	{
-		free(d);
-		return (-1);
-	}
+		return (free(d), -1);
 	d->sp = malloc(sizeof(int) * d->argc);
 	if (!d->sp)
 	{
 		free(d->sa);
-		free(d);
-		return (-1);
+		return (free(d), -1);
 	}
 	d->sb = malloc(sizeof(int) * d->argc);
 	if (!d->sb)
@@ -103,6 +97,8 @@ int	init_data(t_list *d)
 		free(d);
 		return (-1);
 	}
+	d->argc = argc - 1;
+	d->error = 0;
 	d->sia = d->argc;
 	d->sib = 0;
 	d->sip = d->argc;
