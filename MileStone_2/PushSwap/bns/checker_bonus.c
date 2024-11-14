@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:16:45 by yurolive          #+#    #+#             */
-/*   Updated: 2024/11/11 16:16:46 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:15:13 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,15 +81,13 @@ static int	init_data(t_list *d, int arc)
 int	main(int arc, char **args)
 {
 	t_list	*d;
-	int		j;
 
-	j = 0;
 	if (arc == 1)
 		return (0);
 	d = malloc(sizeof(t_list));
 	if (!d)
 		return (0);
-	if (check_args(args, arc - 1) == -1)
+	if (check_args(&args, &arc) == -1)
 		ft_free(d, 0);
 	if (init_data(d, arc) == -1)
 		return (0);

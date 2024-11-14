@@ -6,7 +6,7 @@
 #    By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/11 16:15:27 by yurolive          #+#    #+#              #
-#    Updated: 2024/11/11 17:37:05 by yurolive         ###   ########.fr        #
+#    Updated: 2024/11/14 15:23:36 by yurolive         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ SRCS = ./src/pushswap.c ./src/ft_strlen.c ./src/ft_atoi.c ./src/swap.c ./src/sor
 BONUS_SRC = ./bns/checker_bonus.c ./bns/ss_bonus.c ./bns/sa_bonus.c ./bns/sb_bonus.c ./bns/pa_bonus.c \
 				./bns/rb_bonus.c ./bns/rr_bonus.c ./bns/rra_bonus.c ./bns/rrb_bonus.c ./bns/rrr_bonus.c ./bns/swap_bonus.c \
 				./bns/get_next_line_bonus.c ./bns/checker_lines_bonus.c ./bns/check_same_nums_bonus.c \
-				./bns/utils_bonus.c ./bns/check_args_bonus.c ./bns/pb_bonus.c ./bns/ra_bonus.c
+				./bns/utils_bonus.c ./bns/check_args_bonus.c ./bns/pb_bonus.c ./bns/ra_bonus.c ./bns/ft_split_bonus.c ./bns/ft_calloc_bonus.c
 
 INCLUDE = ./inc/pushswap.h
 
@@ -73,7 +73,6 @@ ${NAME}: ${OBJS} $(INCLUDE)
 
 -include ${DEPS2}
 bonus: ${BONUS_OBJS}
-				@touch $@
 				@${CC} ${BONUS_SRC} -o ${NAME_BONUS}
 				@echo "\n$(GREEN)Created ${NAME_BONUS} ✓$(DEF_COLOR)\n"
 
