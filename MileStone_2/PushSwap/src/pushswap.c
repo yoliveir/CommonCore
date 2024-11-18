@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:13:20 by yurolive          #+#    #+#             */
-/*   Updated: 2024/11/14 15:32:53 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/11/18 20:41:54 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ int	arg_to_int(t_list *d, int arc, char **args)
 
 int	init_data(t_list *d, int argc)
 {
+	d->argc = argc - 1;
 	d->sa = malloc(sizeof(int) * d->argc);
 	if (!d->sa)
 		return (free(d), -1);
@@ -97,7 +98,6 @@ int	init_data(t_list *d, int argc)
 		free(d);
 		return (-1);
 	}
-	d->argc = argc - 1;
 	d->error = 0;
 	d->sia = d->argc;
 	d->sib = 0;
