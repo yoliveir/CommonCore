@@ -130,6 +130,5 @@ int			key_handler(int keysym, t_fractal *fractal);
 //*** clean_up ***
 int    	close_handler(t_fractal *fractal);
 int		mouse_handler(int button, int x, int y, t_fractal *fractal);
-int		julia_track(int x, int y, t_fractal *fractal);
 
 #endif

@@ -11,12 +11,12 @@ static void	my_pixel_put(int x, int y, t_img *img, int color)
 	offset = (y * img->line_len) + (x * (img->bpp / 8));
 	*(unsigned int *)(img->pixels_ptr + offset) = color;
 }
-	
+
 /*
  * EASY TOGGLE mandel & julia
 */
 static void	mandel_vs_julia(t_complex *z, t_complex *c, t_fractal *fractal)
-{	
+{
 	if (!ft_strncmp(fractal->name, "julia", 5))
 	{
 		c->x = fractal->julia_x;
