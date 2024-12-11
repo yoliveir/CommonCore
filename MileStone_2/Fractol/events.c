@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:17:44 by yurolive          #+#    #+#             */
-/*   Updated: 2024/12/10 15:22:02 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:34:48 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int	key_handler(int keysym, t_fractal *fractal)
 
 int	mouse_handler(int button, int x, int y, t_fractal *fractal)
 {
+	(void)x;
+	(void)y;
 	if (button == Button4)
 	{
 		fractal->zoom *= 0.95;

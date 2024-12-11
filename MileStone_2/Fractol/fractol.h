@@ -6,16 +6,16 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 18:14:59 by yurolive          #+#    #+#             */
-/*   Updated: 2024/12/10 18:19:04 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:29:01 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# include <stdio.h> //TODO debugging
-# include <stdlib.h> //malloc free
-# include <unistd.h> // write
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 # include <math.h>
 # include <X11/X.h>
 # include <X11/keysym.h>

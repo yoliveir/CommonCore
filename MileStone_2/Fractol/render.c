@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 18:05:30 by yurolive          #+#    #+#             */
-/*   Updated: 2024/12/10 18:08:51 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:21:41 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	my_pixel_put(int x, int y, t_img *img, int color)
 	int	offset;
 
 	offset = (y * img->line_len) + (x * (img->bpp / 8));
-	if (*(unsigned int *)(img->pixels_ptr + offset) != color)
+	if (*(unsigned int *)(img->pixels_ptr + offset) != (unsigned int)color)
 		*(unsigned int *)(img->pixels_ptr + offset) = color;
 }
 

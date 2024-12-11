@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:23:09 by yurolive          #+#    #+#             */
-/*   Updated: 2024/12/10 18:09:17 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:18:58 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(int ac, char **av)
 {
 	t_fractal	fractal;
 
-	if (2 == ac && !ft_strncmp(av[1], "mandelbrot", 10)
+	if ((2 == ac && !ft_strncmp(av[1], "mandelbrot", 10))
 		|| (4 == ac && !ft_strncmp(av[1], "julia", 5)))
 	{
 		fractal.name = av[1];
