@@ -9,7 +9,10 @@ El Common Core de 42 Cursus - Set 2024
 | **🤖 Born2beroot** | [![Documentation](https://img.shields.io/badge/Documentation-0077B5)](https://github.com/MiMendiola/Born2BeRoot#readme) | [![125](https://img.shields.io/badge/125-2ea44f)]() |
 | **📡 MiniTalk** | ❌ | [![125](https://img.shields.io/badge/125-2ea44f)]() |
 | **🔀 PushSwap** | ❌ | [![125](https://img.shields.io/badge/125-2ea44f)]() |
+| **🌀 Fract-ol** | ❌ | [![111](https://img.shields.io/badge/111-2ea44f)]() |
 
 Printf - (In Libft - Need Revision)
 
 Get_Next_Line - (In Libft - Need Revision)
+
+Fract-ol - (Review Parameters Management, Julia)
